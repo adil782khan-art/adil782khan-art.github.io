@@ -1,0 +1,140 @@
+.portfolio-intro {
+  padding: 64px 24px;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.section-image-placeholder {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 16 / 9;
+  margin: 24px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 14px;
+  padding: 16px;
+  text-align: center;
+}
+
+.resume-download {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.resume-download:hover {
+  opacity: 0.9;
+}
+
+.portfolio-section {
+  padding: 64px 24px;
+}
+
+.portfolio-section h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.portfolio-section-alt {
+  background: var(--code-bg);
+}
+
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.entry-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.entry-card h3 {
+  margin: 0 0 4px;
+  color: var(--text-h);
+}
+
+.entry-meta {
+  font-size: 14px;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.entry-note {
+  font-size: 14px;
+  font-style: italic;
+  margin: 0;
+}
+
+.entry-card ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.entry-card li {
+  margin-bottom: 6px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.project-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.project-image-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  font-size: 14px;
+  padding: 12px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.project-card h3 {
+  margin: 0 0 4px;
+  color: var(--text-h);
+}
+
+.project-card .entry-meta {
+  margin: 0 0 12px;
+}
+
+.project-card p:not(.entry-meta) {
+  font-size: 15px;
+  line-height: 1.5;
+}
