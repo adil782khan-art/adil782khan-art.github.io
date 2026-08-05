@@ -51,7 +51,7 @@ function Header() {
       <div className="header-bar">
         {/* TODO: swap for the AI-generated logo image once it exists (see header-footer.feature.md) */}
         <NavLink to="/" className="logo" aria-label="Home">
-          [Your Name]
+          Adil Khan
         </NavLink>
 
         <nav className="nav nav-desktop" aria-label="Primary">
