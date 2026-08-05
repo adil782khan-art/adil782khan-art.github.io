@@ -15,8 +15,7 @@ function Footer() {
           GitHub
         </a>
       </div>
-      {/* TODO: replace [Your Name] once the display name is finalized */}
-      <p className="footer-copyright">&copy; {year} [Your Name]. All rights reserved.</p>
+      <p className="footer-copyright">&copy; {year} Adil Khan. All rights reserved.</p>
     </footer>
   )
 }
