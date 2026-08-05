@@ -52,5 +52,6 @@ Pages on every push to `main`, with Supabase env vars securely injected at build
       passed to the build step
 - [ ] Pushing to `main` triggers a workflow run that completes successfully
 - [ ] `https://adil782khan-art.github.io` loads the live app after deploy
-- [ ] Navigating within the app never changes the path away from the root domain
-      (HashRouter, so paths look like `/#/portfolio`)
+
+Note: routing behavior (HashRouter, per-page paths) is scoped to the
+`header-footer` feature, not this one — verify it there.
