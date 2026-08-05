@@ -56,7 +56,17 @@ Show the developer's education, work experience, and projects — the substantiv
       Rocket Elevators)
 - [x] Resume PDF is downloadable (`public/resume.pdf`)
 - [x] ≥3 distinct, separated sections (Education, Work Experience, Projects)
-- [ ] ≥2 AI-generated images with `alt` text, tool documented
+- [x] ≥2 AI-generated images with `alt` text, tool documented
+
+## AI-Generated Images
+
+Both generated with **Canva AI** (image generation feature):
+
+- `src/assets/resume-icon.png` — laptop displaying a resume with an approval
+  checkmark, used at the top of the page near the "Download Resume" button
+- `src/assets/career-journey.png` — briefcase connected by a winding path to a
+  folder, representing career progression, used as a divider between Work Experience
+  and Projects
 
 ## Status Note
 
@@ -66,7 +76,8 @@ Show the developer's education, work experience, and projects — the substantiv
   developer as "expected December 2026"; Dr. Kiran C. Patel High School graduation
   year (2023) is the developer's best recollection, not resume-confirmed — verify if
   precision matters.
-- AI-generated images (2 required) and both project screenshots are pending —
-  `.section-image-placeholder` (×2) and `.project-image-placeholder` (×2) blocks mark
+- The 2 required AI-generated images are done (see above). The 2 **project**
+  screenshots (CodeBloggs, Rocket Elevators) are still pending — real screenshots of
+  the deployed projects, not AI-generated — `.project-image-placeholder` blocks mark
   where they go, each with a `TODO` comment showing the exact `<img>` markup to swap
-  in. Not done until real images replace them and the AI tool used is documented here.
+  in.

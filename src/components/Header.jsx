@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import logo from '../assets/logo.png'
 import './Header.css'
 
 const navItems = [
@@ -49,8 +50,8 @@ function Header() {
   return (
     <header className="header">
       <div className="header-bar">
-        {/* TODO: swap for the AI-generated logo image once it exists (see header-footer.feature.md) */}
         <NavLink to="/" className="logo" aria-label="Home">
+          <img src={logo} alt="Adil Khan logo" className="logo-image" />
           Adil Khan
         </NavLink>
 

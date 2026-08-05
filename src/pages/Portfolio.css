@@ -5,20 +5,14 @@
   margin: 0 auto;
 }
 
-.section-image-placeholder {
+.section-image {
   width: 100%;
   max-width: 480px;
   aspect-ratio: 16 / 9;
+  object-fit: cover;
   margin: 24px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px dashed var(--border);
+  display: block;
   border-radius: 12px;
-  color: var(--text);
-  font-size: 14px;
-  padding: 16px;
-  text-align: center;
 }
 
 .resume-download {

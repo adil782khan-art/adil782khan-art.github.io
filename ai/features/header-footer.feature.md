@@ -55,13 +55,21 @@ footer with contact/social links — wrapping every page.
 
 ## Acceptance Criteria
 
-- [ ] `Header` renders on every route, sticky/fixed at top
-- [ ] `Header` contains links to Home, Portfolio, Links, Contact — nothing else
-- [ ] Logo is AI-generated, has `alt` text, links to `/`
-- [ ] `Footer` renders on every route, contains contact info + copyright
-- [ ] At >768px, nav links display horizontally
-- [ ] At ≤768px, nav becomes icon-based and sits at the bottom of the viewport
-- [ ] No horizontal scrolling or overflow at any viewport width
-- [ ] App is wrapped in `HashRouter`; navigating between routes changes only the hash
+- [x] `Header` renders on every route, sticky/fixed at top
+- [x] `Header` contains links to Home, Portfolio, Links, Contact — nothing else
+- [x] Logo is AI-generated, has `alt` text, links to `/`
+- [x] `Footer` renders on every route, contains contact info + copyright
+- [x] At >768px, nav links display horizontally
+- [x] At ≤768px, nav becomes icon-based and sits at the bottom of the viewport
+- [x] No horizontal scrolling or overflow at any viewport width
+- [x] App is wrapped in `HashRouter`; navigating between routes changes only the hash
       (e.g. `/#/portfolio`), never a real path segment
-- [ ] All four routes render their placeholder page through `Layout` without errors
+- [x] All four routes render their placeholder page through `Layout` without errors
+
+## AI-Generated Logo
+
+Generated with **Canva AI** (image generation feature): a compact "AK" monogram in
+the site's accent purple. Cropped to a tight square from the original export via a
+threshold-based trim (removing a large near-white margin) so it stays legible at
+header size. Stored at `src/assets/logo.png`, rendered at 32×32px next to the "Adil
+Khan" wordmark in `Header.jsx`.

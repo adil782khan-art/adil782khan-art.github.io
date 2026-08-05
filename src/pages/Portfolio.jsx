@@ -1,3 +1,5 @@
+import resumeIcon from '../assets/resume-icon.png'
+import careerJourney from '../assets/career-journey.png'
 import './Portfolio.css'
 
 const education = [
@@ -46,14 +48,11 @@ function Portfolio() {
     <div className="portfolio">
       <section className="portfolio-intro">
         <h1>Portfolio</h1>
-        {/* TODO: replace with <img> once an AI-generated header image exists (see portfolio-page.feature.md) */}
-        <div
-          className="section-image-placeholder"
-          role="img"
-          aria-label="Placeholder for an AI-generated header illustration"
-        >
-          AI-generated image coming soon
-        </div>
+        <img
+          src={resumeIcon}
+          alt="Illustrated laptop displaying a resume document with an approval checkmark"
+          className="section-image"
+        />
         <a href="/resume.pdf" download className="resume-download">
           Download Resume (PDF)
         </a>
@@ -91,14 +90,11 @@ function Portfolio() {
             </div>
           ))}
         </div>
-        {/* TODO: replace with <img> once an AI-generated decorative image exists (see portfolio-page.feature.md) */}
-        <div
-          className="section-image-placeholder"
-          role="img"
-          aria-label="Placeholder for an AI-generated decorative illustration"
-        >
-          AI-generated image coming soon
-        </div>
+        <img
+          src={careerJourney}
+          alt="Illustrated briefcase connected by a winding path to a folder, representing career progression"
+          className="section-image"
+        />
       </section>
 
       <section className="portfolio-section">
