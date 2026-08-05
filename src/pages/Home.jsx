@@ -1,3 +1,5 @@
+import heroAvatar from '../assets/hero-avatar.png'
+import skillsIllustration from '../assets/skills-illustration.png'
 import './Home.css'
 
 const technicalSkills = [
@@ -108,14 +110,11 @@ function Home() {
   return (
     <div className="home">
       <section className="home-intro">
-        {/* TODO: replace with <img src=".../avatar.png" alt="Illustrated avatar of Adil Khan" /> once the AI-generated image exists */}
-        <div
-          className="image-placeholder"
-          role="img"
-          aria-label="Placeholder for an AI-generated avatar illustration of Adil Khan"
-        >
-          AI-generated image coming soon
-        </div>
+        <img
+          src={heroAvatar}
+          alt="Illustrated avatar of a developer working at a laptop, surrounded by code windows"
+          className="home-image"
+        />
         <h1>Adil Khan</h1>
         <p className="home-tagline">Full-Stack Developer</p>
         <p className="home-bio">
@@ -152,14 +151,11 @@ function Home() {
             </div>
           ))}
         </div>
-        {/* TODO: replace with <img src=".../stack-illustration.png" alt="..." /> once the AI-generated image exists */}
-        <div
-          className="image-placeholder"
-          role="img"
-          aria-label="Placeholder for an AI-generated abstract full-stack development illustration"
-        >
-          AI-generated image coming soon
-        </div>
+        <img
+          src={skillsIllustration}
+          alt="Illustrated lightbulb, speech bubble, and gears representing ideas, communication, and problem-solving"
+          className="home-image home-image-skills"
+        />
       </section>
     </div>
   )

@@ -17,20 +17,14 @@
   line-height: 1.6;
 }
 
-.image-placeholder {
+.home-image {
   width: 100%;
-  max-width: 320px;
-  aspect-ratio: 1;
+  max-width: 480px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   margin: 0 auto 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px dashed var(--border);
+  display: block;
   border-radius: 12px;
-  color: var(--text);
-  font-size: 14px;
-  padding: 16px;
-  text-align: center;
 }
 
 .home-skills {
@@ -81,6 +75,6 @@
   background: var(--bg);
 }
 
-.home-skills-soft .image-placeholder {
+.home-image-skills {
   margin: 40px auto 0;
 }

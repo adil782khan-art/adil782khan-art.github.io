@@ -40,18 +40,20 @@ as the landing page recruiters see first.
 
 ## Acceptance Criteria
 
-- [ ] Accessible at `/` and is the default route
-- [ ] Name is prominently displayed
-- [ ] Role/title/tagline is visible
-- [ ] Intro paragraph present
-- [ ] ≥3 technical skills, each with icon + supporting text, in a grid/card/list layout
-- [ ] ≥3 soft skills, same structure
-- [ ] ≥3 visually distinct, separated sections total
-- [ ] ≥2 AI-generated images, relevant, with `alt` text, tool documented
+- [x] Accessible at `/` and is the default route
+- [x] Name is prominently displayed
+- [x] Role/title/tagline is visible
+- [x] Intro paragraph present
+- [x] ≥3 technical skills, each with icon + supporting text, in a grid/card/list layout
+- [x] ≥3 soft skills, same structure
+- [x] ≥3 visually distinct, separated sections total
+- [x] ≥2 AI-generated images, relevant, with `alt` text, tool documented
 
-## Status Note
+## AI-Generated Images
 
-Images are pending — two `.image-placeholder` blocks mark where they go (intro
-section, end of soft skills section), each with a `TODO` comment showing the exact
-`<img>` markup to swap in. Not done until real AI-generated images replace them and
-the tool used is documented here.
+Both images generated with **Canva AI** (image generation feature):
+
+- `src/assets/hero-avatar.png` — developer-at-laptop illustration, used in the intro
+  section
+- `src/assets/skills-illustration.png` — lightbulb/speech-bubble/gears illustration,
+  used at the end of the Soft Skills section
