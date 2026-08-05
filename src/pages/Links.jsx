@@ -1,5 +1,71 @@
+import './Links.css'
+
+const links = [
+  {
+    title: 'GitHub',
+    url: 'https://github.com/adil782khan-art',
+    description:
+      'My GitHub profile — browse the source code for this portfolio and other projects, including CodeBloggs and Rocket Elevators.',
+    icon: (
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <circle cx="6" cy="6" r="2.5" />
+        <circle cx="6" cy="18" r="2.5" />
+        <circle cx="18" cy="12" r="2.5" />
+        <path d="M6 8.5V15.5" />
+        <path d="M6 10c0 3 4 4 9.5 4.5" />
+      </svg>
+    ),
+  },
+  {
+    title: 'LeetCode',
+    url: 'https://leetcode.com/u/adil782/',
+    description:
+      'My LeetCode profile, where I practice data structures, algorithms, and technical interview problem-solving.',
+    icon: (
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <path d="M8 4h8v4a4 4 0 0 1-8 0V4Z" />
+        <path d="M8 5H5a3 3 0 0 0 3 4" />
+        <path d="M16 5h3a3 3 0 0 1-3 4" />
+        <path d="M12 12v4" />
+        <path d="M9 20h6" />
+        <path d="M10 20v-2.5a2 2 0 0 1 4 0V20" />
+      </svg>
+    ),
+  },
+]
+
 function Links() {
-  return <h1>Links</h1>
+  return (
+    <div className="links">
+      <section className="links-intro">
+        <h1>Links</h1>
+        {/* TODO: replace with <img> once an AI-generated image exists (see link-page.feature.md) */}
+        <div
+          className="section-image-placeholder"
+          role="img"
+          aria-label="Placeholder for an AI-generated header illustration"
+        >
+          AI-generated image coming soon
+        </div>
+      </section>
+
+      <section className="links-list">
+        {links.map((link) => (
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-card"
+            key={link.title}
+          >
+            <div className="link-icon">{link.icon}</div>
+            <h3>{link.title}</h3>
+            <p>{link.description}</p>
+          </a>
+        ))}
+      </section>
+    </div>
+  )
 }
 
 export default Links
