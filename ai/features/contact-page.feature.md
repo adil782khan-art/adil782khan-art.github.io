@@ -59,25 +59,21 @@ and clear success/failure feedback.
 - [x] Empty-field submission blocked with a visible error
 - [x] Invalid email format blocked with a visible error
 - [x] Valid submission calls `supabase.from('messages').insert(...)` with
-      `{ name, email, message }` (code path verified — see status note for why the
-      actual insert can't be exercised yet)
-- [ ] Success: distinct visual success message, form resets, message disappears
-      after a few seconds or next interaction — **not yet verified**, requires a
-      working Supabase connection
-- [x] Failure: distinct visual failure message, form retains user input (verified via
-      the "Supabase not configured" path, which exercises the same failure UI as a
-      real Supabase error would)
-- [ ] Public role cannot `SELECT` from `messages` (verified via RLS policy, not just
-      UI) — depends on the Supabase project existing; see status note
+      `{ name, email, message }` — verified against the live Supabase project
+      (real `201` response)
+- [x] Success: distinct visual success message, form resets, message disappears
+      after a few seconds or next interaction — verified end-to-end against live
+      Supabase via Playwright
+- [x] Failure: distinct visual failure message, form retains user input (verified
+      both via the "Supabase not configured" path and is the same failure UI a real
+      Supabase error would trigger)
+- [x] Public role cannot `SELECT` from `messages` — verified live: anon `SELECT`
+      returns `401 permission denied for table messages` (no `SELECT` grant exists
+      for `anon`, so this is blocked at the Postgres permission layer, not just RLS)
 
 ## Status Note
 
-- The Supabase project doesn't exist yet (separate manual task, tracked outside this
-  feature). Everything client-side is built and verified: field validation, error
-  states, the exact `insert` call shape, and graceful failure handling when
-  `isSupabaseConfigured` is `false` (confirmed via Playwright — submitting a valid
-  form with no `.env` shows the failure UI instead of crashing).
-- Once the Supabase project, `messages` table, and RLS policies exist and
-  `VITE_SUPABASE_URL`/`VITE_SUPABASE_ANON_KEY` are set in a local `.env`, re-verify:
-  a real successful insert (success message + form reset), and that RLS actually
-  blocks public `SELECT` (not just that the UI never calls it).
+Feature complete and fully verified end-to-end against the live Supabase project:
+- Real insert: `POST /rest/v1/messages` → `201`, success message shown, form reset
+- Real RLS/permission check: `GET /rest/v1/messages` as `anon` → `401`
+- `.env` configured locally with the project's URL and publishable (anon) key
