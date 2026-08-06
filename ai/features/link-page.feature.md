@@ -38,7 +38,7 @@ presented as structured cards.
 ## Acceptance Criteria
 
 - [x] Accessible at `/links`
-- [ ] ≥3 link cards rendered (2 done: GitHub, LeetCode — LinkedIn pending, see below)
+- [x] ≥3 link cards rendered (GitHub, LeetCode, LinkedIn)
 - [x] Each card has image, title, 1–3 sentence description, clickable URL
 - [x] Links open in a new tab (`target="_blank"` + `rel="noopener noreferrer"`)
 - [ ] ≥1 AI-generated image with `alt` text, tool documented
@@ -48,9 +48,8 @@ presented as structured cards.
 - Card thumbnails are hand-crafted inline SVG icons (consistent with `Header.jsx`'s
   nav icons), not separate image files — satisfies "image (thumbnail or preview)" per
   card without a new dependency.
-- Third link (LinkedIn) is intentionally not yet added — the developer's LinkedIn
-  profile is being cleaned up first (custom URL, headline, photo, About section).
-  Add it here once that's finalized.
+- All 3 links done: GitHub, LeetCode, and LinkedIn
+  (`linkedin.com/in/adilkhandev`, cleaned up with a custom URL).
 - The page's required AI-generated image is still pending — `.section-image-placeholder`
   marks where it goes, with a `TODO` comment showing the exact `<img>` markup to swap
   in.
