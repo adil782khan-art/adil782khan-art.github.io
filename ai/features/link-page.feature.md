@@ -41,7 +41,14 @@ presented as structured cards.
 - [x] ≥3 link cards rendered (GitHub, LeetCode, LinkedIn)
 - [x] Each card has image, title, 1–3 sentence description, clickable URL
 - [x] Links open in a new tab (`target="_blank"` + `rel="noopener noreferrer"`)
-- [ ] ≥1 AI-generated image with `alt` text, tool documented
+- [x] ≥1 AI-generated image with `alt` text, tool documented
+
+## AI-Generated Image
+
+Generated with **Canva AI** (image generation feature): a central node connected to
+four smaller nodes, representing a developer's connections across platforms. Stored
+at `src/assets/connection-hub.png`, rendered at the top of the page above the link
+cards.
 
 ## Status Note
 
@@ -50,6 +57,4 @@ presented as structured cards.
   card without a new dependency.
 - All 3 links done: GitHub, LeetCode, and LinkedIn
   (`linkedin.com/in/adilkhandev`, cleaned up with a custom URL).
-- The page's required AI-generated image is still pending — `.section-image-placeholder`
-  marks where it goes, with a `TODO` comment showing the exact `<img>` markup to swap
-  in.
+- Feature complete — all acceptance criteria satisfied.

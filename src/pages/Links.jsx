@@ -1,3 +1,4 @@
+import connectionHub from '../assets/connection-hub.png'
 import './Links.css'
 
 const links = [
@@ -53,14 +54,11 @@ function Links() {
     <div className="links">
       <section className="links-intro">
         <h1>Links</h1>
-        {/* TODO: replace with <img> once an AI-generated image exists (see link-page.feature.md) */}
-        <div
-          className="section-image-placeholder"
-          role="img"
-          aria-label="Placeholder for an AI-generated header illustration"
-        >
-          AI-generated image coming soon
-        </div>
+        <img
+          src={connectionHub}
+          alt="Illustrated central node connected to four smaller nodes, representing a developer's connections across platforms"
+          className="section-image"
+        />
       </section>
 
       <section className="links-list">
