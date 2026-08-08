@@ -1,23 +1,21 @@
-# Elevator Pitch — Script 1 (Draft)
+# Elevator Pitch — Script 1
 
-> First-draft script for the initial elevator pitch recording. Practice it, make it
-> sound like you, then record. This draft targets ~50-55 seconds at a natural
-> speaking pace — trim further if it runs long for you.
+> This is the script as actually delivered in the first recording:
+> https://youtu.be/9bn1Ul8GwlQ
 
 ---
 
-Hi, I'm Adil Khan, a full-stack developer finishing my Associate's at Hillsborough
-Community College before transferring to USF.
+Hi, I'm Adil Khan, a full-stack developer who builds real applications — things like CRUD
+dashboards with authentication, deployed through CI/CD pipelines with GitHub Actions
+and AWS.
 
-I build real applications across the MERN stack — React and Node on the front and
-back end, MongoDB for data, deployed through CI/CD pipelines with GitHub Actions. On
-a recent project, CodeBloggs, I led a DevOps hardening pass that raised our
-Lighthouse accessibility score from 94 to 100, and built a full Selenium regression
-suite to protect it.
+What sets me apart isn't just the code I ship — it's that I don't stop at
+implementing a pattern, I dig into why it works. And because I make a habit of
+explaining what I build clearly enough to teach it, I'm someone a team can count on
+to actually communicate, not just ship silently.
 
-What sets me apart is I don't stop at making something work — I dig into why it
-works, and I make a habit of explaining what I build clearly enough to teach it.
-That habit, plus the discipline I picked up from years of competitive basketball, is
-what I bring to a team.
+Outside of work, I'm usually reading — same curiosity that drives me to dig into how
+code works, just pointed at a book instead.
 
-I'd love to talk about how I can contribute to yours.
+I'm looking to bring that curiosity and clarity to a full-stack team where I can keep
+building and, above all, keep learning.

@@ -1,0 +1,84 @@
+.backoffice-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logout-button {
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--text-h);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.backoffice-content {
+  padding: 0 24px 64px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.backoffice-error {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.messages-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.messages-table th,
+.messages-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.message-row {
+  cursor: pointer;
+}
+
+.message-row:hover {
+  background: var(--code-bg);
+}
+
+.messages-table button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-h);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.messages-table button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.modal-meta {
+  color: var(--text);
+  font-size: 14px;
+  margin: 0 0 4px;
+}
+
+.modal-message {
+  margin-top: 16px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}

@@ -2,11 +2,15 @@ import heroAvatar from '../assets/hero-avatar.png'
 import skillsIllustration from '../assets/skills-illustration.png'
 import './Home.css'
 
+// Data-driven list of technical skills - each has a title, a short description,
+// and a hand-drawn inline SVG icon. Rendering from an array like this means
+// adding/removing a skill only requires editing this list, not the JSX below.
 const technicalSkills = [
   {
     title: 'JavaScript & React',
     description:
       'I build interactive, component-based UIs with React, managing state and side effects to keep applications fast and maintainable.',
+    // Code-bracket icon </>
     icon: (
       <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
         <path d="M8 6L3 12l5 6" />
@@ -18,6 +22,7 @@ const technicalSkills = [
     title: 'Node.js & Express',
     description:
       'I design and build RESTful APIs and backend logic with Node.js and Express, handling authentication, data validation, and CRUD operations.',
+    // Stacked server/layers icon
     icon: (
       <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
         <rect x="3" y="4" width="18" height="4" rx="1" />
@@ -30,6 +35,7 @@ const technicalSkills = [
     title: 'Databases (MongoDB/SQL)',
     description:
       'I model and query relational and document data, from SQL joins to Mongoose schemas, to support real application data needs.',
+    // Database cylinder icon
     icon: (
       <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
         <ellipse cx="12" cy="5" rx="8" ry="3" />
@@ -42,6 +48,7 @@ const technicalSkills = [
     title: 'Git & CI/CD',
     description:
       'I use Git for version control and GitHub Actions to automate testing and deployment, so code ships reliably without manual steps.',
+    // Git branch/merge icon
     icon: (
       <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
         <circle cx="6" cy="6" r="2.5" />
@@ -54,11 +61,13 @@ const technicalSkills = [
   },
 ]
 
+// Same data-driven pattern as technicalSkills, for the soft skills section
 const softSkills = [
   {
     title: 'Curiosity',
     description:
       "I don't stop at making something work — I dig into why it works, whether that's a token validation flow or a closure-based event system.",
+    // Lightbulb icon
     icon: (
       <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
         <path d="M9 18h6" />
@@ -71,6 +80,7 @@ const softSkills = [
     title: 'Communication',
     description:
       'I make a habit of explaining what I build clearly enough to teach it, so teammates are never left guessing at my code.',
+    // Chat bubble icon
     icon: (
       <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
         <path d="M4 5h16v11H8l-4 4V5Z" />
@@ -81,6 +91,7 @@ const softSkills = [
     title: 'Discipline',
     description:
       'Years of playing competitive basketball taught me to stay focused under pressure and keep showing up consistently, on the court and in a sprint.',
+    // Basketball icon
     icon: (
       <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
         <circle cx="12" cy="12" r="9" />
@@ -95,6 +106,7 @@ const softSkills = [
     title: 'Adaptability',
     description:
       "I've moved across different stacks and project types over the course of this program and pick up new tools quickly when a project demands it.",
+    // Circular refresh/rotate arrows icon
     icon: (
       <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
         <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
@@ -109,7 +121,9 @@ const softSkills = [
 function Home() {
   return (
     <div className="home">
+      {/* Intro section: avatar image, name, tagline, bio paragraph */}
       <section className="home-intro">
+        {/* AI-generated (Canva) illustration - see ai/features/home-page.feature.md */}
         <img
           src={heroAvatar}
           alt="Illustrated avatar of a developer working at a laptop, surrounded by code windows"
@@ -127,6 +141,7 @@ function Home() {
         </p>
       </section>
 
+      {/* Technical skills grid - maps over the technicalSkills array above */}
       <section className="home-skills">
         <h2>Technical Skills</h2>
         <div className="skills-grid">
@@ -140,6 +155,8 @@ function Home() {
         </div>
       </section>
 
+      {/* Soft skills grid - same pattern, plus a second AI-generated image at
+          the end of the section (also satisfies the "≥2 AI images" requirement) */}
       <section className="home-skills home-skills-soft">
         <h2>Soft Skills</h2>
         <div className="skills-grid">
