@@ -76,8 +76,8 @@ Both generated with **Canva AI** (image generation feature):
   developer as "expected December 2026"; Dr. Kiran C. Patel High School graduation
   year (2023) is the developer's best recollection, not resume-confirmed — verify if
   precision matters.
-- The 2 required AI-generated images are done (see above). The 2 **project**
-  screenshots (CodeBloggs, Rocket Elevators) are still pending — real screenshots of
-  the deployed projects, not AI-generated — `.project-image-placeholder` blocks mark
-  where they go, each with a `TODO` comment showing the exact `<img>` markup to swap
-  in.
+- The 2 required AI-generated images are done (see above). The 2 project
+  screenshots are also done now: CodeBloggs' is its Login page (running locally at
+  the time, MongoDB Atlas-connected) — chosen because Login is one of the two pages
+  specifically Lighthouse-audited per the project description; Rocket Elevators' is
+  its homepage (served as static HTML locally). Feature is fully complete.

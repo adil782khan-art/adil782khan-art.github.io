@@ -33,7 +33,7 @@
   text-align: center;
   text-decoration: none;
   color: inherit;
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background-color var(--transition), color var(--transition);
 }
 
 .link-card:hover {

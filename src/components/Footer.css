@@ -1,6 +1,7 @@
 .footer {
   padding: 24px;
   border-top: 1px solid var(--border);
+  transition: border-color var(--transition);
   text-align: center;
   display: flex;
   flex-direction: column;

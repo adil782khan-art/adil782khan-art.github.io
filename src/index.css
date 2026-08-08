@@ -33,8 +33,11 @@
   }
 }
 
+/* System-preference dark mode - applies automatically when no explicit
+   choice has been made via the ThemeToggle (that's what :not([data-theme="light"])
+   guards against: an explicit light override must still win over a dark OS pref) */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --text: #9ca3af;
     --text-h: #f3f4f6;
     --bg: #16171d;
@@ -55,6 +58,29 @@
   }
 }
 
+/* Explicit dark mode, set by ThemeToggle regardless of OS preference - same
+   values as the media query above, kept in sync manually since they can't
+   easily share one rule across a media query boundary */
+:root[data-theme="dark"] {
+  --text: #9ca3af;
+  --text-h: #f3f4f6;
+  --bg: #16171d;
+  --border: #2e303a;
+  --code-bg: #1f2028;
+  --accent: #c084fc;
+  --accent-bg: rgba(192, 132, 252, 0.15);
+  --accent-border: rgba(192, 132, 252, 0.5);
+  --social-bg: rgba(47, 48, 58, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  --shadow-hover:
+    rgba(0, 0, 0, 0.5) 0 16px 24px -6px, rgba(0, 0, 0, 0.3) 0 6px 8px -3px;
+}
+
+:root[data-theme="dark"] #social .button-icon {
+  filter: invert(1) brightness(2);
+}
+
 *,
 *::before,
 *::after {
@@ -67,6 +93,20 @@ html {
 
 body {
   margin: 0;
+  /* Smooth color transition when the theme is switched, instead of an
+     instant snap between the light/dark CSS variable values */
+  transition: background-color var(--transition), color var(--transition);
+}
+
+/* Tells the browser which color scheme is active for native UI (scrollbars,
+   form controls) once a theme has been explicitly chosen - without this,
+   native UI would keep following the OS preference even after an override */
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 #root {

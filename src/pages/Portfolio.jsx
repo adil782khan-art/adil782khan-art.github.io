@@ -1,5 +1,7 @@
 import resumeIcon from '../assets/resume-icon.png'
 import careerJourney from '../assets/career-journey.png'
+import codebloggsScreenshot from '../assets/codebloggs-screenshot.png'
+import rocketElevatorsScreenshot from '../assets/rocket-elevators-screenshot.jpg'
 import './Portfolio.css'
 
 // Education entries, most recent first (reverse chronological, per spec).
@@ -33,20 +35,24 @@ const experience = [
   },
 ]
 
-// Project entries - each needs a name, tech stack, and description per spec.
-// A real screenshot still needs to be added for each (see the placeholder below).
+// Project entries - each needs a name, tech stack, description, and a real
+// screenshot of the deployed/running project per spec
 const projects = [
   {
     name: 'CodeBloggs — Full-Stack Social Blogging Platform',
     tech: 'React, Redux, Node.js, Express, MongoDB, Selenium, GitHub Actions',
     description:
       'Frontend developer on a collaborative MERN social platform supporting posts, comments, likes, a member directory, and session-based authentication with an admin dashboard. Led a DevOps hardening pass, auditing the Login and Home pages with Lighthouse and raising Accessibility from 94 to 100 and SEO from 82 to 100. Built a 10-test Selenium regression suite covering navigation, form validation, and responsive layout.',
+    // Screenshot of the Login page - one of the two pages specifically
+    // audited with Lighthouse per the description above
+    image: codebloggsScreenshot,
   },
   {
     name: 'Rocket Elevators — Front-End Website',
     tech: 'HTML5, CSS3, Bootstrap, JavaScript (ES6+), jQuery, REST API integration',
     description:
       'Built a multi-step quote calculator that dynamically computes elevator count and total pricing based on building type and live user input. Implemented a contact form with full client-side validation and a POST integration to a REST API, with real-time success/failure feedback. Built a sortable, filterable service-agents directory that fetches data from a GET endpoint, filters by rating threshold, and supports regional filtering.',
+    image: rocketElevatorsScreenshot,
   },
 ]
 
@@ -120,14 +126,11 @@ function Portfolio() {
         <div className="project-list">
           {projects.map((project) => (
             <div className="project-card" key={project.name}>
-              {/* TODO: replace with a real screenshot of the deployed project */}
-              <div
-                className="project-image-placeholder"
-                role="img"
-                aria-label={`Placeholder for a screenshot of ${project.name}`}
-              >
-                Project image coming soon
-              </div>
+              <img
+                src={project.image}
+                alt={`Screenshot of ${project.name}`}
+                className="project-image"
+              />
               <h3>{project.name}</h3>
               <p className="entry-meta">{project.tech}</p>
               <p>{project.description}</p>

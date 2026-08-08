@@ -57,7 +57,7 @@
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 24px;
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background-color var(--transition), color var(--transition);
 }
 
 .entry-card:hover {
@@ -109,7 +109,7 @@
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 24px;
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background-color var(--transition), color var(--transition);
 }
 
 .project-card:hover {
@@ -118,18 +118,14 @@
   border-color: var(--accent-border);
 }
 
-.project-image-placeholder {
+.project-image {
   width: 100%;
   aspect-ratio: 16 / 9;
-  border: 2px dashed var(--border);
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid var(--border);
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text);
-  font-size: 14px;
-  padding: 12px;
-  text-align: center;
+  display: block;
   margin-bottom: 16px;
 }
 
