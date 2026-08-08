@@ -51,6 +51,13 @@
   border-radius: 8px;
   padding: 24px;
   text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-border);
 }
 
 .skill-icon {

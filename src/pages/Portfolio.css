@@ -57,6 +57,13 @@
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 24px;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.entry-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-border);
 }
 
 .entry-card h3 {
@@ -102,6 +109,13 @@
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 24px;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-border);
 }
 
 .project-image-placeholder {

@@ -2,12 +2,15 @@ import resumeIcon from '../assets/resume-icon.png'
 import careerJourney from '../assets/career-journey.png'
 import './Portfolio.css'
 
+// Education entries, most recent first (reverse chronological, per spec).
+// "note" is optional extra context (e.g. transfer plans) shown under the entry.
 const education = [
   {
     institution: 'Hillsborough Community College',
     degree: 'Associate of Arts (In Progress)',
     dates: 'Expected December 2026',
     note: 'Transferring to the University of South Florida (USF)',
+    coursework: 'Relevant coursework: General Chemistry, Biology I & II, Introduction to Dental Sciences',
   },
   {
     institution: 'Dr. Kiran C. Patel High School',
@@ -16,6 +19,8 @@ const education = [
   },
 ]
 
+// Work experience entries, most recent first. "bullets" becomes a <ul> of
+// responsibilities/achievements for that role.
 const experience = [
   {
     title: 'Small Business Assistant — Vending Machine Route',
@@ -28,6 +33,8 @@ const experience = [
   },
 ]
 
+// Project entries - each needs a name, tech stack, and description per spec.
+// A real screenshot still needs to be added for each (see the placeholder below).
 const projects = [
   {
     name: 'CodeBloggs — Full-Stack Social Blogging Platform',
@@ -46,6 +53,8 @@ const projects = [
 function Portfolio() {
   return (
     <div className="portfolio">
+      {/* Intro: page title, an AI-generated resume-themed image, and the
+          resume download link/button */}
       <section className="portfolio-intro">
         <h1>Portfolio</h1>
         <img
@@ -53,11 +62,14 @@ function Portfolio() {
           alt="Illustrated laptop displaying a resume document with an approval checkmark"
           className="section-image"
         />
+        {/* "download" attribute prompts a file download instead of navigating;
+            the PDF is a static file served from /public */}
         <a href="/resume.pdf" download className="resume-download">
           Download Resume (PDF)
         </a>
       </section>
 
+      {/* Education section - maps over the education array above */}
       <section className="portfolio-section">
         <h2>Education</h2>
         <div className="entry-list">
@@ -67,12 +79,16 @@ function Portfolio() {
               <p className="entry-meta">
                 {item.degree} — {item.dates}
               </p>
+              {/* Only render the note/coursework paragraphs if this entry has them */}
               {item.note && <p className="entry-note">{item.note}</p>}
+              {item.coursework && <p className="entry-note">{item.coursework}</p>}
             </div>
           ))}
         </div>
       </section>
 
+      {/* Work experience section - "-alt" class gives it a different
+          background so it reads as visually distinct from Education */}
       <section className="portfolio-section portfolio-section-alt">
         <h2>Work Experience</h2>
         <div className="entry-list">
@@ -90,6 +106,7 @@ function Portfolio() {
             </div>
           ))}
         </div>
+        {/* Second AI-generated image, used as a divider before Projects */}
         <img
           src={careerJourney}
           alt="Illustrated briefcase connected by a winding path to a folder, representing career progression"
@@ -97,6 +114,7 @@ function Portfolio() {
         />
       </section>
 
+      {/* Projects section - maps over the projects array above */}
       <section className="portfolio-section">
         <h2>Projects</h2>
         <div className="project-list">
