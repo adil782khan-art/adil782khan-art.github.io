@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>adil782khan-art.github.io</title>
+    <title>Adil Khan — Full-Stack Developer</title>
+    <script>
+      // Runs before first paint so a saved theme applies immediately - waiting
+      // for React to mount would cause a visible flash of the wrong theme.
+      (function () {
+        var saved = localStorage.getItem('theme')
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved)
+        }
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

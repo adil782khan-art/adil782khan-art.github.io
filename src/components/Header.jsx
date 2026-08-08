@@ -1,6 +1,7 @@
 // NavLink is like Link but knows when its route is active, for styling
 import { NavLink } from 'react-router-dom'
 import logo from '../assets/logo.png'
+import ThemeToggle from './ThemeToggle'
 import './Header.css'
 
 // Single source of truth for nav links - used to render both the desktop
@@ -83,6 +84,10 @@ function Header() {
             </NavLink>
           ))}
         </nav>
+
+        {/* Visible in the header bar on every page/breakpoint, not just desktop -
+            see Extra Mile: light-dark-mode.feature.md */}
+        <ThemeToggle />
       </div>
 
       {/* Icon-only nav fixed to the bottom of the viewport, shown on mobile

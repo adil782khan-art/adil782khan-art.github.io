@@ -51,7 +51,7 @@
   border-radius: 8px;
   padding: 24px;
   text-align: center;
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background-color var(--transition), color var(--transition);
 }
 
 .skill-card:hover {
